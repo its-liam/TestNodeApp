@@ -61,6 +61,6 @@ app.get('/contact', (req, res) => {
   res.render('contact.hbs', context);
 });
 
-app.listen(8000, () => {
+app.listen(process.env.PORT || 8000, () => {
   console.log("Server is up and running on port 8000.");
 });
