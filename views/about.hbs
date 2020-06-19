@@ -1,0 +1,87 @@
+<!DOCTYPE HTML> <!-- This is a Handlebars ('hbs') view. The handlebars module renders this into HTML on runtime -->
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <style rel="stylesheet" type="text/css">
+    body{
+      font-family: "Cascadia Code";
+      margin: 0;
+    }
+    h1, h3{
+      text-align: center;
+    }
+    #list-container{
+      text-align: center;
+    }
+    #list-wrap{
+      display: inline-block;
+    }
+    li{
+      font-size: 1.15em;
+    }
+    footer{
+      position: absolute;
+      bottom: 2.5%;
+      width: 100%;
+      text-align: center;
+    }
+    .main{
+      margin-top: 13em;
+    }
+    header{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      background: #efefef;
+      font-size: 1.4em;
+    }
+    header:hover{
+      background: #8b8b8b;
+      cursor: pointer;
+    }
+    header > h1{
+      text-align: center;
+    }
+
+    #header-table{
+      margin: 0 auto;
+      width: 40%;
+      table-layout: fixed;
+      margin-bottom: 30px;
+    }
+    td{
+      text-align: center;
+      background: #dbdbdb;
+      border-radius: 2px;
+    }
+    td:hover{
+      color: #e8e8e8;
+      background: #212121;
+    }
+    a{
+      text-decoration: none;
+      color: #000;
+    }
+    a:hover{
+      color: #e8e8e8;
+    }
+  </style>
+</head>
+<body>
+  {{> header}} <!-- this is a partial. The 'hbs' Node module renders this on runtime -->
+
+  <div class="main">
+    <h1>{{pageTitle}}</h1>
+    <h3 style="margin-top: -0.5em;">I am {{age}}</h3>
+    <h3 style="margin-top: 3em;">My interests include: </h3>
+    <div id="list-container"><div id="list-wrap"<ul>
+      {{#each interests}}
+        <li>{{ this }}</li>
+      {{else}}
+        <p>No contents.</p>
+      {{/each}}
+    </ul></div></div>
+    {{> footer}} <!-- This is a partial. The 'hbs' module in Node renders this -->
+  </div>
+</body>
+</html> <!-- This is a Handlebars ('hbs') view. The handlebars module renders this into HTML on runtime -->

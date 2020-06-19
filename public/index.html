@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>A static node/express page.</title>
+
+  <style rel='stylesheet' type="text/css">
+    body{
+      margin: 0 !important;
+      font-family: "Cascadia Code";
+    }
+    #heading{
+      font-family: "Cascadia Code";
+      text-align: center;
+    }
+    #heading:hover{
+      text-shadow: 0px 0px 6px;
+      cursor: pointer;
+    }
+    #gif-row{
+      text-align: center;
+    }
+    #gif{
+      height: 25em;
+      width: 16.5em;
+      display: block;
+      margin: 0 auto;
+    }
+    #img{
+      display: block;
+      margin: 0 auto;
+      margin-top: 3em;
+      margin-bottom: 2em;
+    }
+    #heading-paragraph{
+      font-family: "Cascadia Code";
+      text-align: center;
+    }
+    .main{
+      margin-top: 13em;
+    }
+    header{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      background: #efefef;
+      font-size: 1.4em;
+    }
+    header:hover{
+      background: #8b8b8b;
+      cursor: pointer;
+    }
+    header > h1{
+      text-align: center;
+    }
+    #header-table{
+      margin: 0 auto;
+      width: 40%;
+      table-layout: fixed;
+      margin-bottom: 30px;
+    }
+    td{
+      text-align: center;
+      background: #dbdbdb;
+      border-radius: 2px;
+    }
+    td:hover{
+      color: #e8e8e8;
+      background: #212121;
+    }
+    a{
+      text-decoration: none;
+      color: #000;
+    }
+    a:hover{
+      color: #e8e8e8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Liam's First Express Server</h1>
+    <table id="header-table">
+      <tr>
+        <td><a href="/">Home</a></td>
+        <td><a href="/about">About</a></td>
+        <td><a href="/contact">Contact</a></td>
+      </tr>
+    </table>
+  </header>
+
+  <div class="main">
+    <table>
+      <tr>
+        <h1 id="heading">A static index page.</h1>
+        <p id="heading-paragraph">This page is set to test the configuration of a
+           static page using Node and Express.</p>
+      </tr>
+      <tr><img src="liam.jpg" id="img"></img</tr>
+      <tr id="gif-row">
+        <iframe src='https://gfycat.com/ifr/PeriodicEarlyAgama' frameborder='0'
+        scrolling='no' allowfullscreen id="gif"></iframe>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
